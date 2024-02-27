@@ -11,4 +11,4 @@ Usar la consola de comandos como administrador y ejecutar el código
 > pip install tabulate sympy
 
 Dentro de octave ejecutar
->pkg install symbolic
+>pkg install -forge symbolic
