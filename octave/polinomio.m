@@ -13,5 +13,9 @@ function pol = polinomio(f, p0, points)
     end
     pol = pol + f(points(k))*prod;
   end
-  disp(function_handle(pol)(p0));
+  fprintf("polinomio evaluado: ")
+  disp(function_handle(pol)(p0))
+  fprintf("polinomio simplificado: \n")
+  disp(simplify(pol))
+  fplot(function_handle(pol))
 end
