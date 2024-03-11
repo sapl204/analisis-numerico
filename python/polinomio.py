@@ -25,7 +25,7 @@ def polinomio(points, f, p0):
 
 p0 = float(eval(input("ingrese el valor a evaluar en el polinomio, si requiere, usar la libreria math: ")))
 f = eval(input("Ingrese la funcion  usando sympy, ejemplo: 'sp.cos(x) + 1/x': "))
-pointsStr = input("ingrese los puntos que quiere ingresar separados por , : ")
+pointsStr = input("ingrese los puntos de x separados por , : ")
 pointsArr = pointsStr.split(",")
 points = list(map(lambda x: float(x), pointsArr))
 print(polinomio(points, f, p0))
