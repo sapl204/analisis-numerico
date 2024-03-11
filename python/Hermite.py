@@ -2,7 +2,6 @@ import math
 import sympy as sp
 from tabulate import tabulate
 
-xpoints = [1,2,3,4]
 x = sp.Symbol('x')
 def polHermite(xpoints, ypoints, ypPoints, p0):
     heads = ["H(x)", f"H({p0})"]
