@@ -28,7 +28,6 @@ class Hermite:
         print(tabulate(tableData, headers = heads, tablefmt = "grid"))
         sp.plot(polSim, title = "polinomio interpolante de Hermite")
 
-    @property
     def getHermiteByPoints(self):
         heads = ["H(x)", f"H({self.p0})"]
         tableData = []
@@ -40,7 +39,6 @@ class Hermite:
             pol += self.ypoints[j]*(1-2*(x - self.xpoints[j])*dvProdInXj)*prod**2 + self.ypPoints[j]*(x - self.xpoints[j])*prod**2
         self.__showPol(tableData, heads, pol)
     
-    @property
     def getHermiteByFunction(self):
         heads = ["H(x)", f"H({self.p0})"]
         tableData = []
@@ -68,14 +66,14 @@ while True:
         ypointStr = input("ingrese los puntos y separados por , : ")
         ypPointStr = input("ingrese los puntos y' separados por , :")
         her = Hermite(kpointsToArray(xpointStr), kpointsToArray(ypointStr), kpointsToArray(ypPointStr), p0, None)
-        her.getHermiteByPoints
+        her.getHermiteByPoints()
 
     if option == "2":
         p0 = float(eval(input("ingrese el valor a evaluar en el polinomio, si requiere, usar la libreria math: ")))
         xpointStr = input("ingrese los puntos de x separados por , : ")
         f = eval(input("Ingrese la funcion  usando sympy, ejemplo: ' sp.cos(x) + 1/x': "))
         her = Hermite(kpointsToArray(xpointStr), [], [], p0, f)
-        her.getHermiteByFunction
+        her.getHermiteByFunction()
     if option == "3":
         print("gracias por usar el programa :)")
         break
